@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5cbc10dd8b.js" crossorigin="anonymous"></script>
+    <style>
+        .child{
+            height: calc(100vh - 48px - 40px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main class="  bg-black h-screen text-white  w-screen  ">
+        <h1 class="text-5xl text-center  pt-10">Tasbih counter</h1>
+        <div class="gap-6 flex flex-col  justify-center items-center child ">
+
+            <p id="p" class=" text-6xl">0</p>
+            <div class="btn border-8 border-blue-700 h-60 w-60 rounded-full flex flex-col justify-center items-center text-9xl  text-blue-700"
+                id="btn">
+                <i class="fa-solid fa-angle-up"></i>
+            </div>
+
+            <!-- <button id="btn" >click for count</button> -->
+            <button id="reset" class="h-16 w-16 rounded-full -mt-14  border-4 border-blue-700 bg-black"><i
+                    class="fa-solid fa-rotate-right text-3xl"></i></button>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function count() {
+            p.innerText++
+
+        }
+        function reset() {
+            p.innerText = "0"
+
+        }
+
+        let p = document.getElementById("p")
+
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click", count)
+
+        const resett = document.getElementById("reset")
+        resett.addEventListener("click", reset)
+
+
+
+        // console.log(typep)
+
+        // function count(){
+        //     const p = document.getElementById("p")
+        //     pNumber = parseInt(p.innerText)
+        //     console.log(typeof pNumber)
+        //     let pNumber2 = 0
+        //     p.innerText = pNumber
+        //     console.log()
+
+        //     if (p.onclick){
+        //         pNumber2++
+        //         console.log(pNumber2)
+
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
